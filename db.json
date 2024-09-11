@@ -1,0 +1,109 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "name": "Spaghetti Carbonara",
+        "origin": "Italy",
+        "mainIngredients": ["spaghetti", "eggs", "pancetta", "parmesan", "black pepper"],
+        "image": "https://example.com/images/carbonara.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Sushi",
+        "origin": "Japan",
+        "mainIngredients": ["sushi rice", "nori", "raw fish", "soy sauce", "wasabi"],
+        "image": "https://example.com/images/sushi.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Tacos",
+        "origin": "Mexico",
+        "mainIngredients": ["corn tortillas", "beef", "lettuce", "cheese", "salsa"],
+        "image": "https://example.com/images/tacos.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Butter Chicken",
+        "origin": "India",
+        "mainIngredients": ["chicken", "butter", "tomato sauce", "cream", "garam masala"],
+        "image": "https://example.com/images/butter-chicken.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Croissant",
+        "origin": "France",
+        "mainIngredients": ["flour", "butter", "yeast", "sugar", "milk"],
+        "image": "https://example.com/images/croissant.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Paella",
+        "origin": "Spain",
+        "mainIngredients": ["rice", "saffron", "chicken", "seafood", "peas"],
+        "image": "https://example.com/images/paella.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Peking Duck",
+        "origin": "China",
+        "mainIngredients": ["duck", "hoisin sauce", "scallions", "cucumbers", "pancakes"],
+        "image": "https://example.com/images/peking-duck.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Hamburger",
+        "origin": "USA",
+        "mainIngredients": ["ground beef", "buns", "lettuce", "tomato", "cheese"],
+        "image": "https://example.com/images/hamburger.jpg"
+      },
+      {
+        "id": 9,
+        "name": "Greek Salad",
+        "origin": "Greece",
+        "mainIngredients": ["tomatoes", "cucumbers", "feta cheese", "olives", "oregano"],
+        "image": "https://example.com/images/greek-salad.jpg"
+      },
+      {
+        "id": 10,
+        "name": "Pho",
+        "origin": "Vietnam",
+        "mainIngredients": ["rice noodles", "beef", "broth", "herbs", "bean sprouts"],
+        "image": "https://example.com/images/pho.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Kimchi",
+        "origin": "Korea",
+        "mainIngredients": ["napa cabbage", "red chili pepper", "garlic", "ginger", "fish sauce"],
+        "image": "https://example.com/images/kimchi.jpg"
+      },
+      {
+        "id": 12,
+        "name": "Hummus",
+        "origin": "Middle East",
+        "mainIngredients": ["chickpeas", "tahini", "olive oil", "garlic", "lemon"],
+        "image": "https://example.com/images/hummus.jpg"
+      },
+      {
+        "id": 13,
+        "name": "Shepherd's Pie",
+        "origin": "United Kingdom",
+        "mainIngredients": ["ground lamb", "potatoes", "onions", "carrots", "peas"],
+        "image": "https://example.com/images/shepherds-pie.jpg"
+      },
+      {
+        "id": 14,
+        "name": "Shakshuka",
+        "origin": "Tunisia",
+        "mainIngredients": ["eggs", "tomatoes", "onions", "bell peppers", "spices"],
+        "image": "https://example.com/images/shakshuka.jpg"
+      },
+      {
+        "id": 15,
+        "name": "Pad Thai",
+        "origin": "Thailand",
+        "mainIngredients": ["rice noodles", "shrimp", "peanuts", "egg", "tamarind sauce"],
+        "image": "https://example.com/images/pad-thai.jpg"
+      }
+    ]
+  }
