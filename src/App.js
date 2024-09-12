@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import Favorites from './components/Favorites';  
+import Favorites from './components/Favorites';
 import Form from './components/Form';
 
 function App() {
@@ -33,7 +33,10 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home onAddToFavorites={addToFavorites} />} />
+          <Route 
+            path="/" 
+            element={<Home onAddToFavorites={addToFavorites} />} 
+          />
           <Route path="/about" element={<About />} />
           <Route 
             path="/favorites" 

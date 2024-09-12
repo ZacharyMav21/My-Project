@@ -11,7 +11,6 @@ const Form = () => {
 
   const navigate = useNavigate();
 
- 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setRecipe((prevRecipe) => ({
@@ -20,29 +19,38 @@ const Form = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const storedRecipes = JSON.parse(localStorage.getItem('recipes')) || [];
+    try {
+      const response = await fetch('http://localhost:5000/recipes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: recipe.name,
+          origin: recipe.origin,
+          mainIngredients: recipe.mainIngredients.split(',').map(ingredient => ingredient.trim()), // Convert comma-separated string to array
+          image: recipe.image,
+        }),
+      });
 
-    const newId = storedRecipes.length ? Math.max(storedRecipes.map(recipe => recipe.id)) + 1 : 1;
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
 
-    const newRecipe = {
-      id: newId,
-      ...recipe
-    };
+      setRecipe({
+        name: '',
+        origin: '',
+        mainIngredients: '',
+        image: ''
+      });
 
-    const updatedRecipes = [...storedRecipes, newRecipe];
-    localStorage.setItem('recipes', JSON.stringify(updatedRecipes));
-
-    setRecipe({
-      name: '',
-      origin: '',
-      mainIngredients: '',
-      image: ''
-    });
-
-    navigate('/');
+      navigate('/');
+    } catch (error) {
+      console.error('Error adding recipe:', error);
+    }
   };
 
   return (

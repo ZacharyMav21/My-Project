@@ -26,8 +26,20 @@ const Home = ({ onAddToFavorites }) => {
       <h1>Recipe Collection</h1>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {recipes.map((recipe) => (
-          <div key={recipe.id} style={{ margin: '20px', border: '1px solid #ccc', padding: '10px', width: '300px' }}>
-            <img src={recipe.image} alt={recipe.name} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+          <div
+            key={recipe.id}
+            style={{
+              margin: '20px',
+              border: '1px solid #ccc',
+              padding: '10px',
+              width: '300px'
+            }}
+          >
+            <img
+              src={recipe.image}
+              alt={recipe.name}
+              style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+            />
             <h2>{recipe.name}</h2>
             <p><strong>Origin:</strong> {recipe.origin}</p>
             <p><strong>Main Ingredients:</strong> {recipe.mainIngredients.join(', ')}</p>
@@ -42,3 +54,4 @@ const Home = ({ onAddToFavorites }) => {
 };
 
 export default Home;
+
