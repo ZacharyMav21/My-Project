@@ -20,7 +20,7 @@ const About = () => {
           <strong>Favorites Page:</strong> Visit the “Favorites” page to see all the recipes you’ve marked as favorites. You can view details of each recipe and remove any recipe from your favorites list if you change your mind.
         </li>
         <li>
-          <strong>Form Page:</strong> Use the form page to input or submit additional data related to recipes, such as adding new recipes or feedback (if applicable).
+          <strong>Form Page:</strong> Use the form page to input or submit additional data related to recipes, such as adding new recipes.
         </li>
         <li>
           <strong>About Page:</strong> You’re here! This page provides information about how the app works and how to use it.

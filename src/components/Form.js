@@ -31,7 +31,7 @@ const Form = () => {
         body: JSON.stringify({
           name: recipe.name,
           origin: recipe.origin,
-          mainIngredients: recipe.mainIngredients.split(',').map(ingredient => ingredient.trim()), // Convert comma-separated string to array
+          mainIngredients: recipe.mainIngredients.split(',').map(ingredient => ingredient.trim()),
           image: recipe.image,
         }),
       });
