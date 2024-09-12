@@ -17,6 +17,23 @@ const Home = ({ onAddToFavorites }) => {
       });
   }, []);
 
+  const deleteRecipe = async (id) => {
+    try {
+      const response = await fetch(`http://localhost:5000/recipes/${id}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        // Update the recipes state by removing the deleted recipe
+        setRecipes(recipes.filter((recipe) => recipe.id !== id));
+      } else {
+        console.error('Failed to delete the recipe');
+      }
+    } catch (error) {
+      console.error('Error deleting recipe:', error);
+    }
+  };
+
   if (loading) {
     return <h2>Loading...</h2>;
   }
@@ -32,7 +49,7 @@ const Home = ({ onAddToFavorites }) => {
               margin: '20px',
               border: '1px solid #ccc',
               padding: '10px',
-              width: '300px'
+              width: '300px',
             }}
           >
             <img
@@ -46,6 +63,9 @@ const Home = ({ onAddToFavorites }) => {
             <button onClick={() => onAddToFavorites(recipe)}>
               Add to Favorites
             </button>
+            <button onClick={() => deleteRecipe(recipe.id)} style={{ marginLeft: '10px', backgroundColor: 'red', color: 'white' }}>
+              Delete
+            </button>
           </div>
         ))}
       </div>
@@ -54,4 +74,3 @@ const Home = ({ onAddToFavorites }) => {
 };
 
 export default Home;
-
